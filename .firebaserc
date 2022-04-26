@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "cp-origin"
+  },
+  "targets": {
+    "cp-origin": {
+      "hosting": {
+        "prod": [
+          "lest-durain"
+        ]
+      }
+    }
+  }
+}
