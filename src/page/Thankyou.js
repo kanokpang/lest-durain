@@ -16,10 +16,6 @@ const CommentsPage = (props) => {
       >
         <Image width={'100%'} src={Thankyou} />
       </Box>
-      <Box onClick={() => window.close()}
-        marginTop='36px' fontWeight='bold' fontSize='24px' textAlign='center' color='#3FA7DB'>
-        <Typography>ปิด</Typography>
-      </Box>
     </Body>
   );
 };
