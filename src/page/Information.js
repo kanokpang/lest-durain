@@ -80,7 +80,7 @@ const CommentsPage = (props) => {
   };
 
   return (
-    <Body>
+    <Body props={props}>
       <Box maxW='425px' display='block' margin='0 auto' p='16px'>
         <Text m='0' textAlign={'center'} fontWeight="bold">ลงทะเบียนเพื่อสอบถามรายละเอียดเพิ่มเติม<br/>สำหรับผู้ที่สนใจเข้าร่วมธุรกิจขายทุเรียน Let's Do Rian</Text>
         <Box mt='32px'>

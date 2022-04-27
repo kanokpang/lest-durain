@@ -13,7 +13,7 @@ const Body = (props) => {
 
   return (
     <>
-      <Navbar/>
+      <Navbar props={props.props}/>
       {!matches && <>
         <Box maxW='300px' display='block' margin='0 auto' padding='16px 0'>
           <Image textAlign='center' width={'300px'} src={Asset1} />

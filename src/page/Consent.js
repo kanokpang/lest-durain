@@ -21,7 +21,7 @@ const CommentsPage = (props) => {
   };
 
   return (
-    <Body>
+    <Body props={props}>
       <Box maxW='425px' display='block' margin='0 auto' p='16px'>
         <Grid mt='14px' templateColumns='repeat(5, 1fr)' gap={4}>
           <GridItem colSpan={1} h='10' onClick={() => props.history.push('/')} ><ArrowBackIcon w={20} h={20} /></GridItem>

@@ -8,7 +8,7 @@ const CommentsPage = (props) => {
   // const { id } = useParams();
 
   return (
-    <Body>
+    <Body props={props}>
       {/* <Image width={'100%'} src={Rectangle_4936} /> */}
       <Box
         textAlign='center'

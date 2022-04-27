@@ -10,7 +10,7 @@ const Body = (props) => {
 
   return (
     <>
-      <Navbar/>
+      <Navbar props={props.props}/>
       <Box
         pb='47px' backgroundColor='white'
         maxW='425px' borderWidth='1px'

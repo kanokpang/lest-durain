@@ -9,7 +9,7 @@ import Rectangle_4936 from '../asset/img/Rectangle_4936.png'
 const CommentsPage = (props) => {
   // const { id } = useParams();
   return (
-    <Body>
+    <Body props={props}>
       <Image width={'100%'} src={Rectangle_4936} />
       <Box>
         <Box

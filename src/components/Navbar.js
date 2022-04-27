@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 import { Center, Image } from '@chakra-ui/react';
 import Logo from '../asset/img/logo.png'
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
       <Center bg='#a8dad7' h='70px'>
-        <Image w='105px' h='auto' src={Logo} />
+        <Image w='105px' h='auto' src={Logo} onClick={() => props.props.history.push('/')}/>
       </Center>
     </div>
   );
