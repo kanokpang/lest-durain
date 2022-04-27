@@ -2,16 +2,12 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Body from '../components/Body3.js'
-import { Box, Grid, GridItem, Text } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import { Button, Checkbox, FormControlLabel, Typography, FormControl, TextField, MenuItem, Select, FormLabel, RadioGroup, Radio} from '@mui/material';
-import Asset1 from '../asset/img/Asset1.png'
 import { db } from '../services/firestore'
-import { async } from '@firebase/util';
 import { styled } from '@mui/material/styles';
-import { ArrowBackIcon } from '@chakra-ui/icons'
-
+import moment from 'moment';
 import { doc, setDoc } from "firebase/firestore"; 
-import { height } from '@mui/system';
 
 const CssTextField = styled(TextField)({
   '& .MuiOutlinedInput-input' : {
@@ -75,6 +71,7 @@ const CommentsPage = (props) => {
         branch,
         channel,
         otherDes,
+        createAt: moment().format("L")
       });
       props.history.push('/thankyou')
     } catch (e) {
