@@ -1,17 +1,23 @@
 import { Provider } from 'react-redux';
 // import { ColorModeScript } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 // import theme from './theme';
 import store from './redux/store/configureStore';
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <StrictMode>
     <Provider store={store}>
-      <App />
+      <Router history={history}>
+        <App />
+      </Router>
     </Provider>
   </StrictMode>,
   document.getElementById('root')

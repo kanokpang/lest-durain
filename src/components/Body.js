@@ -13,7 +13,7 @@ const Body = (props) => {
       <Navbar props={props.props}/>
       <Box
         pb='47px' backgroundColor='white'
-        maxW='425px' borderWidth='1px'
+        maxW='800px' borderWidth='1px'
         borderRadius='10px' overflow='hidden'
         display='block' margin='0 auto'
       >

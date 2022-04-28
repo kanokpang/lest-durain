@@ -4,7 +4,12 @@ import { useParams } from 'react-router-dom';
 import Body from '../components/Body.js'
 import { Box, Image, Divider } from '@chakra-ui/react';
 import { Button, Typography } from '@mui/material';
+
+// import img
 import Rectangle_4936 from '../asset/img/Rectangle_4936.png'
+import durian from '../asset/img/durian.png'
+import farmer from '../asset/img/farmer.png'
+import help from '../asset/img/help.png'
 
 const CommentsPage = (props) => {
   // const { id } = useParams();
@@ -44,13 +49,21 @@ const CommentsPage = (props) => {
           as='p'
           fontSize='16px'
           lineHeight='tight'
+          textAlign='center'
         >
-          <b>โดยมีเหตุผล 3 ข้อ คือ</b>
-          <ul>
-            <li>อยากให้ผู้บริโภคได้รับประทานทุเรียนคุณภาพดี รสชาติอร่อย หวาน มัน</li>
-            <li>อยากสร้างอาชีพให้คนในท้องถิ่นในสภาวะเศรษฐกิจตกต่ำ</li>
-            <li>อยากช่วยเหลือเกษตรกรไทยในสถานการณ์ทุเรียนล้นตลาด</li>
-          </ul>
+          <p style={{fontWeight : '700' }}>โดยมีเหตุผล 3 ข้อ คือ</p>
+          <Box mt='28px'>
+            <Image width={'56px'} height={'100%'} src={durian} />
+            <Typography variant="p" gutterBottom component="div">อยากให้ผู้บริโภคได้รับประทานทุเรียนคุณภาพดี<br/>รสชาติอร่อย หวาน มัน</Typography>
+          </Box>
+          <Box mt='28px'>
+            <Image width={'56px'} height={'100%'} src={farmer} />
+            <Typography variant="p" gutterBottom component="div">อยากสร้างอาชีพให้คนในท้องถิ่น<br/>ในสภาวะเศรษฐกิจตกต่ำ</Typography>
+          </Box>
+          <Box mt='28px'>
+            <Image width={'56px'} height={'100%'} src={help} />
+            <Typography variant="p" gutterBottom component="div">อยากช่วยเหลือเกษตรกรไทย<br/>ในสถานการณ์ทุเรียนล้นตลาด</Typography>
+          </Box>
         </Box>
         <Box
           mt='1'

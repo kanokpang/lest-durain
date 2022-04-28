@@ -1,11 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom';
 import { Box, Flex } from '@chakra-ui/react';
 import Navbar from './components/Navbar';
-import { createBrowserHistory } from "history";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-import InformationPage from './page/InformationPage';
+import Main from './page/Main';
 import Consent from './page/Consent';
 import Information from './page/Information';
 import Thankyou from './page/Thankyou';
@@ -17,19 +16,27 @@ const THEME = createTheme({
   }
 });
 
-const history = createBrowserHistory();
-
 function App() {
   return (
     <ThemeProvider theme={THEME}>
-      <Router history={history}>
-        <Switch>
-          <Route exact path="/" component={InformationPage} />
+      <div className="App">
+        <>
+          <Switch>
+            <Route exact path='/' component={Main} />
+            <Route path='/consent' component={Consent} />
+            <Route path="/information" component={Information} />
+            <Route path="/thankyou" component={Thankyou} />
+          </Switch>
+        </>
+      </div>
+      {/* <Router history={history}> */}
+        {/* <Switch>
+          <Route exact path="/" component={Main} />
           <Route path="/consent" component={Consent} />
           <Route path="/information" component={Information} />
           <Route path="/thankyou" component={Thankyou} />
-        </Switch>
-      </Router>
+        </Switch> */}
+      {/* </Router> */}
     </ThemeProvider>
     
     
