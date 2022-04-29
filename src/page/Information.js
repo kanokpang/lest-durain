@@ -173,6 +173,7 @@ const CommentsPage = (props) => {
               {/*  */}
                 <MenuItem value="เปิดหน้าร้านร่วมกับเรา">เปิดหน้าร้านร่วมกับเรา</MenuItem>
                 <MenuItem value="รถขายทุเรียน">รถขายทุเรียน</MenuItem>
+                <MenuItem value="ซื้อทุเรียนในรูปแบบค้าส่ง">ซื้อทุเรียนในรูปแบบค้าส่ง</MenuItem>
               </CssSelect>
               {(isShoweErorField && errorField?.model) && <FormHelperText style={{color: '#d32f2f'}}>โปรดเลือกรูปแบบการขาย</FormHelperText>}
             </FormControl>
